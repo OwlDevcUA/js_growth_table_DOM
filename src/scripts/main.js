@@ -13,7 +13,7 @@ document.addEventListener('click', (e) => {
       const copyColumn = row.cells[0];
       const newColumn = row.insertCell();
 
-      copyColumn.innerHTML = newColumn.innerHTML;
+      newColumn.innerHTML = copyColumn.innerHTML;
     });
 
     updateColumn();
@@ -36,7 +36,7 @@ document.addEventListener('click', (e) => {
   }
 
   if (removeRow) {
-    field.deleteRow(1);
+    field.deleteRow(field.rows.length - 1);
 
     updateRow();
   }
